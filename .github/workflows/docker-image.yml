@@ -20,6 +20,7 @@ jobs:
       - name: Build and Push DB
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./db 
+          file: ./Dockerfile  
           push: true
           tags: martinspyce/tienda-db:latest, martinspyce/tienda-db:v1
